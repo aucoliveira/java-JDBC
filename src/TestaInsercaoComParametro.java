@@ -10,7 +10,7 @@ public class TestaInsercaoComParametro {
 
             try (PreparedStatement stm = connection
                     .prepareStatement("INSERT INTO PRODUTO (NOME,DESCRICAO) VALUES (?, ?)",
-                            Statement.RETURN_GENERATED_KEYS);) {
+                            Statement.RETURN_GENERATED_KEYS)) {
 
                 adicionarVariavel("Smart TV", "45 polegadas", stm);
                 adicionarVariavel("Radio", "Radio a pilha", stm);
