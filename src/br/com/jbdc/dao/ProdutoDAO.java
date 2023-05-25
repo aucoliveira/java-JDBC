@@ -1,6 +1,7 @@
-package dao;
+package br.com.jbdc.dao;
 
-import modelo.Produto;
+import br.com.jbdc.modelo.Categoria;
+import br.com.jbdc.modelo.Produto;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,8 +14,8 @@ public class ProdutoDAO {
     }
     public void salvar(Produto produto) throws SQLException {
         String sql = "INSERT INTO PRODUTO (NOME, DESCRICAO) VALUES (?, ?)";
-        try (PreparedStatement pstm = connection.prepareStatement(sql,
-                Statement.RETURN_GENERATED_KEYS) ) {
+        try ( PreparedStatement pstm = connection.prepareStatement( sql,
+                Statement.RETURN_GENERATED_KEYS ) ) {
 
             pstm.setString(1,produto.getNome());
             pstm.setString(2, produto.getDescricao());
@@ -34,6 +35,28 @@ public class ProdutoDAO {
         String sql = "SELECT ID, NOME, DESCRICAO FROM PRODUTO";
 
         try ( PreparedStatement pstm = connection.prepareStatement(sql) ) {
+            pstm.execute();
+            try ( ResultSet rst = pstm.getResultSet() ) {
+                while ( rst.next() ) {
+                    Produto produto =
+                            new Produto(rst.getInt(1),
+                                    rst.getString(2),
+                                    rst.getString(3));
+
+                    produtos.add(produto);
+                }
+            }
+        }
+        return produtos;
+    }
+
+    public List<Produto> buscar(Categoria ca) throws SQLException {
+        List<Produto> produtos = new ArrayList<Produto>();
+
+        String sql = "SELECT ID, NOME, DESCRICAO FROM PRODUTO WHERE CATEGORIA_ID = ?";
+
+        try ( PreparedStatement pstm = connection.prepareStatement(sql) ) {
+            pstm.setInt(1, ca.getId());
             pstm.execute();
             try ( ResultSet rst = pstm.getResultSet() ) {
                 while ( rst.next() ) {

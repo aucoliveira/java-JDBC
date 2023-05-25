@@ -1,5 +1,8 @@
-import dao.ProdutoDAO;
-import modelo.Produto;
+package br.com.jbdc;
+
+import br.com.jbdc.dao.ProdutoDAO;
+import br.com.jbdc.factory.ConnectionFactory;
+import br.com.jbdc.modelo.Produto;
 
 import java.sql.*;
 import java.util.List;

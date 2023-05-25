@@ -1,3 +1,7 @@
+package br.com.jbdc;
+
+import br.com.jbdc.factory.ConnectionFactory;
+
 import java.sql.SQLException;
 
 public class TestaPollConexoes {
