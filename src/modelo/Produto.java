@@ -1,3 +1,5 @@
+package modelo;
+
 public class Produto {
 
     private Integer id;
@@ -5,6 +7,12 @@ public class Produto {
     private String descricao;
 
     public Produto(String nome, String descricao) {
+        this.nome = nome;
+        this.descricao = descricao;
+    }
+
+    public Produto(Integer id, String nome, String descricao) {
+        this.id = id;
         this.nome = nome;
         this.descricao = descricao;
     }
@@ -35,6 +43,6 @@ public class Produto {
 
     @Override
     public String toString() {
-        return String.format("O Produto criado foi: %d, %s, %s", this.id, this.nome, this.descricao);
+        return String.format("O roduto criado é: %d, %s, %s", this.id, this.nome, this.descricao);
     }
 }
