@@ -1,3 +1,5 @@
+package desafios;
+
 import br.com.jbdc.dao.CategoriaDAO;
 import br.com.jbdc.factory.ConnectionFactory;
 import br.com.jbdc.modelo.Categoria;

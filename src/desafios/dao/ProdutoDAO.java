@@ -1,7 +1,7 @@
-package br.com.jbdc.dao;
+package desafios.dao;
 
-import br.com.jbdc.modelo.Categoria;
-import br.com.jbdc.modelo.Produto;
+import desafios.modelo.Categoria;
+import desafios.modelo.Produto;
 
 import java.sql.*;
 import java.util.ArrayList;

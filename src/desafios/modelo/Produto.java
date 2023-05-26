@@ -1,4 +1,4 @@
-package br.com.jbdc.modelo;
+package desafios.modelo;
 
 public class Produto {
 
