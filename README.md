@@ -1,7 +1,7 @@
-p# JDBC
+# JDBC
 
 <p align="justify">
-    ## Curso: Java e JDBC: Trabalhando com um banco de dados;    
+     Curso: Java e JDBC: Trabalhando com um banco de dados;    
 </p>
 
 <p align="justify">## Alura; </p>
@@ -10,7 +10,7 @@ p# JDBC
 </p>
 
 
-<p align="justify">## Ferramentas utilizadas </p>
+## Ferramentas utilizadas 
 
 
 
