@@ -1,27 +1,33 @@
 package br.com.jbdc.controller;
 
+import br.com.jbdc.dao.ProdutoDAO;
+import br.com.jbdc.factory.ConnectionFactory;
 import br.com.jbdc.modelo.Produto;
 
-import java.util.ArrayList;
+import java.sql.Connection;
 import java.util.List;
 
-public class ProdutoController {public void deletar(Integer id) {
-    System.out.println("Deletando produto");
-}
+public class ProdutoController {
+
+    private ProdutoDAO produtoDAO;
+
+    public ProdutoController() {
+        Connection connection = new ConnectionFactory().recuperarConexao();
+        this.produtoDAO = new ProdutoDAO(connection);
+    }
+    public void deletar(Integer id) {
+        this.produtoDAO.deletar(id);
+    }
 
     public void salvar(Produto produto) {
-        System.out.println("Salvando produto");
+        this.produtoDAO.salvar(produto);
     }
 
     public List<Produto> listar() {
-        List<Produto> produtos =
-                new ArrayList<Produto>();
-        produtos.add(new Produto("Nome do Produto de teste"
-                , "Descri��o do produto de teste"));
-        return produtos;
+        return this.produtoDAO.listar();
     }
 
     public void alterar(String nome, String descricao, Integer id) {
-        System.out.println("Alterando produto");
+        this.produtoDAO.alterar(nome, descricao, id);
     }
 }

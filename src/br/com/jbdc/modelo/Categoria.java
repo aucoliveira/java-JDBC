@@ -29,4 +29,9 @@ public class Categoria {
     public void adicionar(Produto produto) {
         produtos.add(produto);
     }
+
+    @Override
+    public String toString() {
+        return this.nome;
+    }
 }
