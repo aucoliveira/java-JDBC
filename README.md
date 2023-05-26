@@ -1,5 +1,8 @@
-# Curso: Java e JDBC: Trabalhando com um banco de dados
+# Java e JDBC
 
+<p align="justify">
+     Curso: Java e JDBC: Trabalhando com um banco de dados;    
+</p>
 
 ## Sobre:
 
