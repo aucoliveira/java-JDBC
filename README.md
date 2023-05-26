@@ -6,7 +6,12 @@
 
 ## Sobre:
 
-<p> Curso da Alura de banco de dados MariaDB, utilizando JDBC para comunicação com o banco de dados para CRUD e consultas utiliando também os joins para evitar problemas de <strong>QUERY N+1</strong>, no caso, inner join com a tabela Produto e Categoria, Designer Partner para padrão de comunicação no projeto, com pool de conexões com c3p0 para gerenciar nossas conexões com o bando de dados.
+<p> 
+O curso da Alura aborda o banco de dados MariaDB, onde é utilizado o JDBC para estabelecer a comunicação com o banco de dados. O objetivo do curso é realizar operações <strong>CRUD</strong> (Create, Read, Update, Delete) e consultas, utilizando joins para evitar problemas de <strong>QUERY N+1</strong>. Em específico, é utilizado um inner join entre as tabelas Produto e Categoria.
+</p>
+<p>
+Além disso, o curso adota o padrão de comunicação Designer Partner para o projeto. Também é utilizado um pool de conexões com o c3p0 para gerenciar as conexões com o banco de dados, proporcionando maior eficiência e controle.
+
 </p>
 
 
